@@ -24,11 +24,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        final Button pair = (Button) findViewById(R.id.pair);
-//
-        View.OnClickListener Listen = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
                 integrator.addExtra("SCAN_WIDTH", 640);
                 integrator.addExtra("SCAN_HEIGHT", 480);
                 integrator.addExtra("SCAN_MODE", "QR_CODE_MODE");
@@ -36,9 +32,8 @@ public class HomeActivity extends AppCompatActivity {
                 integrator.addExtra("SAVE_HISTORY", false);//this stops saving ur barcode in barcode scanner app's history
                 
 
-            }
-        };
-                pair.setOnClickListener(Listen);
+
+
 
     }
 
